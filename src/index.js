@@ -4,9 +4,10 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons'
 import robots from './robots'
+import App from './App'
 import CardList from './CardList'
 
-ReactDOM.render( <div><CardList robots ={robots} /></div>, document.getElementById('root'));
+ReactDOM.render( <div> <App /> </div>, document.getElementById('root'));
 
 
 serviceWorker.unregister();
