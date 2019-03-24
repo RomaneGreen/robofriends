@@ -7,6 +7,7 @@ import ErrorBoundary from '../components/ErrorBoundary'
 import { setSearchField} from '../actions'
 import { connect } from 'react-redux'
 
+
 const mapStateToProps = state => {
     return {
         searchField: state.searchField
