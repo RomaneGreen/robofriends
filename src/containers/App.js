@@ -4,7 +4,22 @@ import SearchBox from '../components/SearchBox'
 import Scroll from '../components/Scroll'
 import './App.css'
 import ErrorBoundary from '../components/ErrorBoundary'
+import { setSearchField} from '../actions'
+import { connect } from 'react-redux'
 
+const mapStateToProps = state => {
+    return {
+        searchField: state.searchRobots.searchField
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+
+    return {
+    onSearchChange: (event) => dispatch(setSearchField(event.target.value))
+
+    }
+}
 class App extends Component {
     constructor() {
         super()
@@ -16,6 +31,7 @@ class App extends Component {
 
 
     componentDidMount() {
+        
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(response =>
             response.json() )
@@ -54,4 +70,4 @@ class App extends Component {
     }
 
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App)
