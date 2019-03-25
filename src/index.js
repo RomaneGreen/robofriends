@@ -8,7 +8,7 @@ import 'tachyons'
 import App from './containers/App'
 import { searchRobots } from './reducers';
 import { createLogger } from 'redux-logger';
-
+import thunkMiddleware from 'redux-thunk';
 
 const logger = createLogger();
 const store = createStore(searchRobots, applyMiddleware(logger))
