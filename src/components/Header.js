@@ -1,5 +1,6 @@
-
 import React, { Component } from 'react'
+import CounterButton from './CounterButton'
+
 
 export default class Header extends Component {
 
@@ -7,11 +8,14 @@ export default class Header extends Component {
       return false;
     }
     
+   
   render() {
       console.log('HEADER')
     return (
       <div>
-        <h1 className='f1'>RoboFriends</h1>
+        
+          <h1 className='f1'>RoboFriends</h1>
+          <CounterButton color={'red'} />
       </div>
     )
   }
