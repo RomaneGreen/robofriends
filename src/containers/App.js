@@ -6,6 +6,10 @@ import './App.css'
 import ErrorBoundary from '../components/ErrorBoundary'
 import { setSearchField, requestRobots} from '../actions'
 import { connect } from 'react-redux'
+import Header from '../components/Header'
+
+
+
 
 
 const mapStateToProps = state => {
@@ -49,7 +53,7 @@ class App extends Component {
              <h1>Loading</h1> :
     (
     <div className= 'tc'>
-        <h1 className='f1'>RoboFriends</h1>
+        <Header />
         <SearchBox searchChange={onSearchChange} />
         <Scroll>
             <ErrorBoundary>
